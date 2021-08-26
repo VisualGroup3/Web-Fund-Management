@@ -21,7 +21,7 @@ export class FundsComponent implements OnInit {
   constructor(private fundService: FundService) { }
 
   ngOnInit(): void {
-    this.getFunds();
+    //this.getFunds();
   }
 
   getFunds(): void {

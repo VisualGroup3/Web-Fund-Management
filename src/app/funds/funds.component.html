@@ -1,4 +1,4 @@
-<h2>All Funds</h2>
+<!-- <h2>All Funds</h2>
 <div *ngFor="let fund of funds">
     <p>{{fund.fundId}}</p>
     <p>{{fund.name}}</p>
@@ -7,4 +7,38 @@
     <p>{{fund.fixIncPercentage}}</p>
     <p>{{fund.commodPercentage}}</p>
     <p>{{fund.cashPercentage}}</p>
-</div>
+    <p>{{fund.positionList}}</p>
+</div> -->
+
+<div class="container">
+    <table class="table table-primary table-striped table-hover">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Fund ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Size</th>
+        <th scope="col">Equity%</th>
+        <th scope="col">FixInc%</th>
+        <th scope="col">Commod%</th>
+        <th scope="col">Cash%</th>
+        <th scope="col">Update?</th>
+        <th scope="col">Delete?</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let fund of funds">
+        <th scope="row">1</th>
+        <td>{{fund.fundId}}</td>
+        <td>{{fund.name}}</td>
+        <td>{{fund.size}}</td>
+        <td>{{fund.equityPercentage}}</td>
+        <td>{{fund.fixIncPercentage}}</td>
+        <td>{{fund.commodPercentage}}</td>
+        <td>{{fund.cashPercentage}}</td>
+        <td><button type="button" class="btn btn-dark">Update</button></td>
+        <td><button type="button" class="btn btn-dark">Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    </div>

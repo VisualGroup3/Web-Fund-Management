@@ -9,6 +9,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { ResultTableComponent } from './result-table/result-table.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PositionsComponent } from './positions/positions.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     //ResultTableComponent,
     FormComponent,
     ResultTableComponent,
-    NavBarComponent
+    NavBarComponent,
+    PositionsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

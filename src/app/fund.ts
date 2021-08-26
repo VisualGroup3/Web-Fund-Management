@@ -1,3 +1,5 @@
+import { Position } from './position';
+
 export interface Fund {
     fundId: string;
     name: string;
@@ -6,4 +8,6 @@ export interface Fund {
     fixIncPercentage: number;
     commodPercentage: number;
     cashPercentage: number;
+    //positionList: Position[];
+    //positionList: object;
 }

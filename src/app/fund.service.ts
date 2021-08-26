@@ -12,6 +12,8 @@ export class FundService {
 
   /** GET heroes from the server */
   getFunds(): Observable<Fund[]> {
-    return this.http.get<Fund[]>(this.fundsUrl)
+    return this.http.get<Fund[]>(this.fundsUrl);
   }
+
+  
 }
