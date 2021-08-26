@@ -10,6 +10,8 @@ import { FormComponent } from './form/form.component';
 import { ResultTableComponent } from './result-table/result-table.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
+import {FormsModule} from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

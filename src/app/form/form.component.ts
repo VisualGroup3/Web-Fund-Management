@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CartService } from '../cart.service';
-import { FundService } from '../fund.service';
+import { FormControl} from "@angular/forms";
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -9,20 +10,24 @@ import { FundService } from '../fund.service';
 })
 export class FormComponent {
 
-  constructor(private http: HttpClient, private cartService: CartService, private fundservice: FundService) {
+  constructor(private http: HttpClient, private cartService: CartService) {
+  }
+
+  info = "start";
+
+
+
+  onSubmit() {
+    console.log(this.info);
+    if (this.info == "1") this.getManagers();
 
   }
-  getManagers(){
-    let api = 'http://localhost:8080/api/v1/managers';
-    this.http.get(api).subscribe((response:any)=>{
+  getManagers() {
+    let api = 'http://localhost:8090/api/v1/managers';
+    this.http.get(api).subscribe((response: any) => {
       console.log(response[0]);
       this.cartService.setManagerObj(response[0]);
 
     });
-  }
-
-
-  share() {
-    window.alert('Get all information about managers');
   }
 }
