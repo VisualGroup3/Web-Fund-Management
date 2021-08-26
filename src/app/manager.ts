@@ -2,6 +2,6 @@ export interface Manager {
   employeeId : string,
   firstName :string,
   lastName : string,
-  funds : object,
+  funds : Array<any>,
   email : string
 }

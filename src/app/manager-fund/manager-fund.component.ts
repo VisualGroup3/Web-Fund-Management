@@ -18,7 +18,7 @@ export class ManagerFundComponent implements OnInit {
       this.managers = val;
       for(var i = 0; i < this.managers.length; i++){
         var manager = this.managers[i];
-        if(manager.managerId == "EBF2163"){
+        if(manager.employeeId == "EBF2163"){
 
           this.funds = manager["funds"];
         }
