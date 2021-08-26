@@ -11,6 +11,7 @@ import { ResultTableComponent } from './result-table/result-table.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import {FormsModule} from "@angular/forms";
+import { ManagerComponent } from './manager/manager.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {FormsModule} from "@angular/forms";
     //ResultTableComponent,
     FormComponent,
     ResultTableComponent,
-    NavBarComponent
+    NavBarComponent,
+    ManagerComponent
   ],
   imports: [
     BrowserModule,
