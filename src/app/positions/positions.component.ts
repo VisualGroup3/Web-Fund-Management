@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Fund} from "../fund";
 import {Position} from "../position";
 import {CartService} from "../cart.service";
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-positions',
@@ -11,15 +13,22 @@ import {CartService} from "../cart.service";
 export class PositionsComponent implements OnInit {
 
   funds: Fund[] = [];
+  targetFund?: Fund;
   positionList: Position[] = [];
   positionId = "";
-  constructor(private cartService: CartService) {
+  id = this.activatedRoute.snapshot.paramMap.get('id');
+  
+  constructor(private cartService: CartService, 
+              private location: Location,
+              private activatedRoute: ActivatedRoute) {
     this.cartService.funds.subscribe(val => {
       this.funds = val;
+      console.log(this.id);
       for(var i = 0; i < this.funds.length; i++){
         var fund = this.funds[i];
-        if(fund.fundId == "EBF2163"){
-          console.log(fund.fundId);
+        
+        if(fund.fundId === this.id){
+          this.targetFund = fund;
           console.log(fund["positionList"]);
           this.positionList = fund["positionList"];
         }
@@ -28,6 +37,11 @@ export class PositionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //this.getPositions();
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

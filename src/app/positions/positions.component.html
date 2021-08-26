@@ -1,4 +1,5 @@
 <div class="container" *ngIf = "positionList.length > 0">
+  <h2 *ngIf="targetFund">Positions for {{targetFund.name}}</h2>
   <table class="table table-primary table-striped table-hover">
     <thead>
     <tr >
@@ -22,6 +23,7 @@
     </tr>
     </tbody>
   </table>
+  <button (click)="goBack()" class="btn btn-outline-dark">go back</button>
 </div>
 
 <!--<app-positions [input] = ""></app-positions>-->
