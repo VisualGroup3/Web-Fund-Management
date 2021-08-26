@@ -18,11 +18,10 @@ export class FundsComponent implements OnInit {
   constructor(private cartService: CartService) {
     this.cartService.managers.subscribe(val => {
       this.funds = val;
-      for(var i = 0; i < this.funds.length; i++){
-        var fund = this.funds[i];
-        console.log(fund["positionList"]);
-      }
-
+      // for(var i = 0; i < this.funds.length; i++){
+      //   var fund = this.funds[i];
+      //   console.log(fund["positionList"]);
+      // }
       //this.positionList = this.funds[0].positionList;
     });
   }
