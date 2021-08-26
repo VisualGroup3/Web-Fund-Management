@@ -8,6 +8,6 @@ export interface Fund {
     fixIncPercentage: number;
     commodPercentage: number;
     cashPercentage: number;
-    //positionList: Position[];
+    positionList: Array<any>;
     //positionList: object;
 }

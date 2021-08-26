@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Fund } from '../fund';
+import { Position } from '../position';
 import { FundService } from '../fund.service';
 import {Manager} from "../manager";
 import { CartService } from "../cart.service";
@@ -12,10 +13,17 @@ import { CartService } from "../cart.service";
 export class FundsComponent implements OnInit {
 
   funds: Fund[] = [];
+  positionList: Position[] = [];
+  positionId = "";
   constructor(private cartService: CartService) {
     this.cartService.managers.subscribe(val => {
       this.funds = val;
-      console.log(this.funds[0]);
+      for(var i = 0; i < this.funds.length; i++){
+        var fund = this.funds[i];
+        console.log(fund["positionList"]);
+      }
+
+      //this.positionList = this.funds[0].positionList;
     });
   }
   ngOnInit(): void {
