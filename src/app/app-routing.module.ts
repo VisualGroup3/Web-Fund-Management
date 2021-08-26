@@ -9,8 +9,8 @@ import { PositionsComponent } from './positions/positions.component';
 const routes: Routes = [
   { path: '', redirectTo: '/form', pathMatch: 'full' },
   { path: 'form', component: FormComponent },
-  { path: 'managers', component: ManagerComponent },
-  { path: 'funds', component: FundsComponent },
+  // { path: 'managers', component: ManagerComponent },
+  // { path: 'funds', component: FundsComponent },
   { path: 'fund/:id', component: PositionsComponent }
 ];
 
