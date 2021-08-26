@@ -14,7 +14,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let fund of funds let indexOfFund = index">
-        <th scope="row">1</th>
+        <th scope="row">{{indexOfFund}}</th>
         <td><a routerLink="/fund/{{fund.fundId}}">{{fund.fundId}}</a></td>
         <td>{{fund.name}}</td>
         <td>{{fund.size}}</td>
@@ -22,16 +22,9 @@
         <td>{{fund.fixIncPercentage}}</td>
         <td>{{fund.commodPercentage}}</td>
         <td>{{fund.cashPercentage}}</td>
-        <td *ngFor = "let position of fund.positionList" ngDefaultControl [(ngModel)]="positionId">{{position.positionId}}</td>
       </tr>
       </tbody>
     </table>
     </div>
-<table>
-<tbody>
-<tr>
-<td >position id :{{positionId}}</td>
-</tr>
-</tbody>
-</table>
+
 <!--<app-positions [input] = ""></app-positions>-->

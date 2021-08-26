@@ -1,1 +1,27 @@
-<p>positions works!</p>
+<div class="container" *ngIf = "positionList.length > 0">
+  <table class="table table-primary table-striped table-hover">
+    <thead>
+    <tr >
+      <th scope="col">#</th>
+      <th scope="col">positionId</th>
+      <th scope="col">securitySymbol</th>
+      <th scope="col">price</th>
+      <th scope="col">quantity</th>
+      <th scope="col">assetClass</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let position of positionList let indexOfPosition = index">
+      <th scope="row">{{indexOfPosition}}</th>
+      <td>{{position.positionId}}</td>
+      <td>{{position.securitySymbol}}</td>
+      <td>{{position.price}}</td>
+      <td>{{position.quantity}}</td>
+      <td>{{position.assetClass}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--<app-positions [input] = ""></app-positions>-->

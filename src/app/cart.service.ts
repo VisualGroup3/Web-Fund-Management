@@ -21,7 +21,7 @@ export class CartService {
   }
 
   setFundObj(message: Fund[]) {
-    this.ManagerSource.next(message)
+    this.FundSource.next(message)
   }
 
 }

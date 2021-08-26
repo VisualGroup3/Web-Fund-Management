@@ -14,13 +14,14 @@ export class PositionsComponent implements OnInit {
   positionList: Position[] = [];
   positionId = "";
   constructor(private cartService: CartService) {
-    this.cartService.managers.subscribe(val => {
+    this.cartService.funds.subscribe(val => {
       this.funds = val;
       for(var i = 0; i < this.funds.length; i++){
         var fund = this.funds[i];
         if(fund.fundId == "EBF2163"){
           console.log(fund.fundId);
           console.log(fund["positionList"]);
+          this.positionList = fund["positionList"];
         }
       }
     });

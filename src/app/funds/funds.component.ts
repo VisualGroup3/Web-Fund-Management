@@ -16,7 +16,7 @@ export class FundsComponent implements OnInit {
   positionList: Position[] = [];
   positionId = "";
   constructor(private cartService: CartService) {
-    this.cartService.managers.subscribe(val => {
+    this.cartService.funds.subscribe(val => {
       this.funds = val;
       // for(var i = 0; i < this.funds.length; i++){
       //   var fund = this.funds[i];
