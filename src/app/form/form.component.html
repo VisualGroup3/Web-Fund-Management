@@ -14,7 +14,8 @@
   </form>
 </div>
 
-<app-manager></app-manager>
+<app-manager *ngIf="managerTableOn" ></app-manager>
+<app-funds *ngIf="!managerTableOn"></app-funds>
 <!--<app-result-table></app-result-table>-->
 
 

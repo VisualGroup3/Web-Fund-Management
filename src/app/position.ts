@@ -2,6 +2,6 @@ export interface Position {
     positionId: number;
     securitySymbol: string;
     price: number;
-    AssetClass: string;
+    assetClass: string;
     quantity: number;
 }

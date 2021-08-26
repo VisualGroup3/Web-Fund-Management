@@ -5,6 +5,8 @@ import { FormControl} from "@angular/forms";
 import {Fund} from "../fund";
 import { Manager } from '../manager';
 import {Observable} from "rxjs";
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -12,17 +14,28 @@ import {Observable} from "rxjs";
 })
 export class FormComponent {
 
+  public managerTableOn: boolean = false;
 
-  constructor(private http: HttpClient, private cartService: CartService) {
+  managerSubmitted: boolean = false;
+  fundSubmitted: boolean = false;
+  constructor(private http: HttpClient, 
+              private cartService: CartService,
+              private router: Router ) {
+    
   }
 
   info = "start";
   onSubmit() {
     console.log(this.info);
 
-    if (this.info == "1") this.getManagers();
-    else if(this.info == "2") this.getFunds();
-
+    if (this.info == "1") {
+      this.getManagers();
+      this.managerTableOn = true;
+    }
+    else if(this.info == "2") { 
+      this.getFunds();
+      this.managerTableOn = false;
+    }
   }
   getManagers() {
     let api = 'http://localhost:8080/api/v1/managers';
@@ -30,11 +43,14 @@ export class FormComponent {
       console.log(response);
       this.cartService.setManagerObj(response);
     });
+    
+    //this.router.navigate(['/managers']);
   }
   getFunds() {
     let api = 'http://localhost:8080/api/v1/funds';
     this.http.get<Fund[]>(api).subscribe((response: any) => {
       this.cartService.setFundObj(response);
     });
+    //this.router.navigate(['/funds']);
   }
 }
