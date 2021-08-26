@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { SecuritiesComponent } from './securities/securities.component';
@@ -9,8 +10,12 @@ import { HttpClientModule} from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { ResultTableComponent } from './result-table/result-table.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+
+import { ManagerComponent } from './manager/manager.component';
 import { PositionsComponent } from './positions/positions.component';
-import { FormsModule } from '@angular/forms';
+
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +26,9 @@ import { FormsModule } from '@angular/forms';
     FormComponent,
     ResultTableComponent,
     NavBarComponent,
+    ManagerComponent,
     PositionsComponent
+
   ],
   imports: [
     BrowserModule,
