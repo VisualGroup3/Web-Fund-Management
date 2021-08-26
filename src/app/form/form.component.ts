@@ -12,6 +12,7 @@ import {Observable} from "rxjs";
 })
 export class FormComponent {
 
+
   constructor(private http: HttpClient, private cartService: CartService) {
   }
 
@@ -23,6 +24,7 @@ export class FormComponent {
   }
   getManagers() {
     let api = 'http://localhost:8090/api/v1/managers';
+
     this.http.get<Manager[]>(api).subscribe((response: any) => {
       console.log(response);
       //console.log(JSON.parse(response));
