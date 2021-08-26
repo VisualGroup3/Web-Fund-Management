@@ -22,7 +22,16 @@
         <td>{{fund.fixIncPercentage}}</td>
         <td>{{fund.commodPercentage}}</td>
         <td>{{fund.cashPercentage}}</td>
+        <td *ngFor = "let position of fund.positionList" ngDefaultControl [(ngModel)]="positionId">{{position.positionId}}</td>
       </tr>
       </tbody>
     </table>
     </div>
+<table>
+<tbody>
+<tr>
+<td >position id :{{positionId}}</td>
+</tr>
+</tbody>
+</table>
+<!--<app-positions [input] = ""></app-positions>-->
