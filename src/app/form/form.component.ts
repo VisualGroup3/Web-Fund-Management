@@ -25,14 +25,14 @@ export class FormComponent {
 
   }
   getManagers() {
-    let api = 'http://localhost:8090/api/v1/managers';
+    let api = 'http://localhost:8080/api/v1/managers';
     this.http.get<Manager[]>(api).subscribe((response: any) => {
       console.log(response);
       this.cartService.setManagerObj(response);
     });
   }
   getFunds() {
-    let api = 'http://localhost:8090/api/v1/funds';
+    let api = 'http://localhost:8080/api/v1/funds';
     this.http.get<Fund[]>(api).subscribe((response: any) => {
       this.cartService.setFundObj(response);
     });
