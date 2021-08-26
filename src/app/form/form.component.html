@@ -1,20 +1,23 @@
 
 <div id="form" class="container-sm">
-    <div class="title">
-      <h1 id="searchTitle">Fund Management Search</h1>
-    </div>
-    <form class="form-floating">
-      <select class="form-select-lg mb-3" aria-label="Default select example">
-        <option selected>Choose information you search</option>
-        <option value="1">Get All Information</option>
-        <option value="2">Fund Manager</option>
-        <option value="3">Fund</option>
-        <option value="4">Position</option>
-        <option value="5">Security</option>
-      </select>
-  
-      <button type="button" class="btn btn-light btn-lg" (click)="getManagers()">Search</button>
-    </form>
+  <div class="title">
+    <h1 id="searchTitle">Fund Management Search</h1>
   </div>
-  
-  <app-result-table></app-result-table>
+  <form class="form-floating" (ngSubmit)="onSubmit()" #f = "ngForm">
+    <select class="form-select-lg mb-3" aria-label="Default select example" name="info" [(ngModel)]="info">
+      <option selected>Choose information you search</option>
+      <option value="1">Get All Information</option>
+      <option value="2">Fund Manager</option>
+      <option value="3">Fund</option>
+      <option value="4">Position</option>
+      <option value="5">Security</option>
+    </select>
+
+    <button type="button" class="btn btn-light btn-lg" type="submit">Search</button>
+  </form>
+</div>
+
+<app-result-table></app-result-table>
+
+
+
