@@ -14,6 +14,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ManagerComponent } from './manager/manager.component';
 import { PositionsComponent } from './positions/positions.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ManagerFundComponent } from './manager-fund/manager-fund.component';
 
 
 
@@ -28,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     ResultTableComponent,
     NavBarComponent,
     ManagerComponent,
-    PositionsComponent
+    PositionsComponent,
+    ManagerFundComponent
 
   ],
   imports: [
