@@ -1,5 +1,5 @@
 export interface Manager {
-  employeeId : any,
+  employeeId : string,
   firstName :string,
   lastName : string,
   funds : object,
