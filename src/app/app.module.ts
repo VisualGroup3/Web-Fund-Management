@@ -16,6 +16,8 @@ import { PositionsComponent } from './positions/positions.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ManagerFundComponent } from './manager-fund/manager-fund.component';
 
+import { AgChartsAngularModule } from 'ag-charts-angular';
+
 
 
 
@@ -37,7 +39,8 @@ import { ManagerFundComponent } from './manager-fund/manager-fund.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgChartsAngularModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

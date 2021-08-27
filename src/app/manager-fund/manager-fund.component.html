@@ -1,5 +1,9 @@
 <div class="container" *ngIf = "funds.length > 0">
   <h2 *ngIf="targetManager">Funds for {{targetManager.firstName}} {{targetManager.lastName}}</h2>
+  <ag-charts-angular
+    style="width:200px"
+    [options]="options">
+</ag-charts-angular>
   <table class="table table-primary table-striped table-hover">
     <thead>
     <tr >
