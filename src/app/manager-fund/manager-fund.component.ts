@@ -42,10 +42,15 @@ export class ManagerFundComponent implements OnInit {
     });
     this.options = {
       data: this.data,
+      // series: [{
+      //     type: 'column',
+      //     xKey: 'name',
+      //     yKeys: ['size'],
+      // }],
       series: [{
-          type: 'column',
-          xKey: 'name',
-          yKeys: ['size'],
+        type: 'pie',
+        angleKey: ['size'],
+        labelKey: 'name',
       }],
     };
   }
