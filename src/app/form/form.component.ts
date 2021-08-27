@@ -18,10 +18,10 @@ export class FormComponent {
 
   managerSubmitted: boolean = false;
   fundSubmitted: boolean = false;
-  constructor(private http: HttpClient, 
+  constructor(private http: HttpClient,
               private cartService: CartService,
               private router: Router ) {
-    
+
   }
 
   info = "start";
@@ -32,23 +32,21 @@ export class FormComponent {
       this.getManagers();
       this.managerTableOn = true;
     }
-    else if(this.info == "2") { 
+    else if(this.info == "2") {
       this.getFunds();
       this.managerTableOn = false;
     }
   }
   getManagers() {
-    //let api = 'http://localhost:8080/api/v1/managers';
     let api = 'http://44.196.55.114:8081/api/v1/managers';
     this.http.get<Manager[]>(api).subscribe((response: any) => {
       console.log(response);
       this.cartService.setManagerObj(response);
     });
-    
+
     //this.router.navigate(['/managers']);
   }
   getFunds() {
-    //let api = 'http://localhost:8080/api/v1/funds';
     let api = 'http://44.196.55.114:8081/api/v1/funds';
     this.http.get<Fund[]>(api).subscribe((response: any) => {
       this.cartService.setFundObj(response);

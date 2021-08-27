@@ -14,7 +14,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let position of positionList let indexOfPosition = index">
-      <th scope="row">{{indexOfPosition}}</th>
+      <th scope="row">{{indexOfPosition + 1}}</th>
       <td>{{position.positionId}}</td>
       <td>{{position.securitySymbol}}</td>
       <td>{{position.price}}</td>
