@@ -7,22 +7,16 @@
       <th scope="col">Fund ID</th>
       <th scope="col">Name</th>
       <th scope="col">Size</th>
-      <th scope="col">Equity%</th>
-      <th scope="col">FixInc%</th>
-      <th scope="col">Commod%</th>
-      <th scope="col">Cash%</th>
+
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let fund of funds let indexOfFund = index">
-      <th scope="row">{{indexOfFund}}</th>
+      <th scope="row">{{indexOfFund + 1}}</th>
       <td><a routerLink="/fund/{{fund.fundId}}">{{fund.fundId}}</a></td>
       <td>{{fund.name}}</td>
       <td>{{fund.size}}</td>
-      <td>{{fund.equityPercentage}}</td>
-      <td>{{fund.fixIncPercentage}}</td>
-      <td>{{fund.commodPercentage}}</td>
-      <td>{{fund.cashPercentage}}</td>
+
     </tr>
     </tbody>
   </table>
