@@ -14,7 +14,7 @@
     <tbody>
     <tr *ngFor="let manager of managers; let indexOfManagers = index">
       <th scope="row">{{indexOfManagers+1}}</th>
-      <td>{{manager.employeeId}}</td>
+      <td><a routerLink="/manager/{{manager.employeeId}}">{{manager.employeeId}}</a></td>
       <td>{{manager.firstName}}</td>
       <td>{{manager.lastName}}</td>
       <td>{{manager.email}}</td>

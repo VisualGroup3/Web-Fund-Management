@@ -1,4 +1,5 @@
 <div class="container" *ngIf = "funds.length > 0">
+  <h2 *ngIf="targetManager">Positions for {{targetManager.firstName}} {{targetManager.lastName}}</h2>
   <table class="table table-primary table-striped table-hover">
     <thead>
     <tr >
@@ -25,6 +26,7 @@
     </tr>
     </tbody>
   </table>
+  <button (click)="goBack()" class="btn btn-outline-dark">go back</button>
 </div>
 
 <!--<app-positions [input] = ""></app-positions>-->

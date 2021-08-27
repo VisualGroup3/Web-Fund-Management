@@ -38,7 +38,8 @@ export class FormComponent {
     }
   }
   getManagers() {
-    let api = 'http://localhost:8080/api/v1/managers';
+    //let api = 'http://localhost:8080/api/v1/managers';
+    let api = 'http://44.196.55.114:8081/api/v1/managers';
     this.http.get<Manager[]>(api).subscribe((response: any) => {
       console.log(response);
       this.cartService.setManagerObj(response);
@@ -47,7 +48,8 @@ export class FormComponent {
     //this.router.navigate(['/managers']);
   }
   getFunds() {
-    let api = 'http://localhost:8080/api/v1/funds';
+    //let api = 'http://localhost:8080/api/v1/funds';
+    let api = 'http://44.196.55.114:8081/api/v1/funds';
     this.http.get<Fund[]>(api).subscribe((response: any) => {
       this.cartService.setFundObj(response);
     });

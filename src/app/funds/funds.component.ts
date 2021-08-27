@@ -5,6 +5,7 @@ import { FundService } from '../fund.service';
 import {Manager} from "../manager";
 import { CartService } from "../cart.service";
 
+
 @Component({
   selector: 'app-funds',
   templateUrl: './funds.component.html',
