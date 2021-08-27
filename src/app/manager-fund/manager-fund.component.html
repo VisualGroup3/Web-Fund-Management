@@ -17,7 +17,8 @@
     <tbody>
     <tr *ngFor="let fund of funds let indexOfFund = index">
       <th scope="row">{{indexOfFund + 1}}</th>
-      <td><a routerLink="/fund/{{fund.fundId}}">{{fund.fundId}}</a></td>
+      <!-- <td><a routerLink="/fund/{{fund.fundId}}">{{fund.fundId}}</a></td> -->
+      <td>{{fund.fundId}}</td>
       <td>{{fund.name}}</td>
       <td>{{fund.size}}</td>
 

@@ -14,6 +14,7 @@ import { Location } from '@angular/common';
 export class ManagerFundComponent implements OnInit {
 
   funds: Fund[] = [];
+  fundsForChart: Fund[] = [];
   managers: Manager[] = [];
   targetManager?: Manager;
   id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -32,7 +33,8 @@ export class ManagerFundComponent implements OnInit {
         }
       }
     });
-    this.funds.forEach(fund => {
+    this.fundsForChart = this.funds;
+    this.fundsForChart.forEach(fund => {
       const obj:any = {};
       obj["name"] = fund.name;
       obj["size"] = fund.size;
