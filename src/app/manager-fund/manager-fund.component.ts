@@ -18,25 +18,6 @@ export class ManagerFundComponent implements OnInit {
   targetManager?: Manager;
   id = this.activatedRoute.snapshot.paramMap.get('id');
   public options: any;
-  
-  // data = [
-  //     {
-  //         quarter: 'Q1',
-  //         spending: 450,
-  //     },
-  //     {
-  //         quarter: 'Q2',
-  //         spending: 560,
-  //     },
-  //     {
-  //         quarter: 'Q3',
-  //         spending: 600,
-  //     },
-  //     {
-  //         quarter: 'Q4',
-  //         spending: 700,
-  //     },
-  // ];
   data: any = [];
   constructor(private cartService: CartService,
               private activatedRoute: ActivatedRoute,
